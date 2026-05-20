@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"], .stApp {
+    font-family: 'Inter', sans-serif !important;
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+.stApp > header {
+    background: transparent !important;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+section[data-testid="stSidebar"] {
+    background-color: var(--sidebar_bg) !important;
+}
+section[data-testid="stSidebar"] * {
+    color: var(--text) !important;
+}
+
+/* ── Cards métricas ──────────────────────────────────────────────────────── */
+.metric-card {
+    background: var(--card_bg);
+    border-left: 5px solid var(--primary);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.metric-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--subtext);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 4px;
+}
+
+.metric-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.1;
+}
+
+.metric-delta {
+    font-size: 12px;
+    color: var(--subtext);
+    margin-top: 4px;
+}
+
+/* ── Header banner ───────────────────────────────────────────────────────── */
+.page-header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 14px;
+    padding: 24px 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    color: white;
+}
+
+.page-header p {
+    font-size: 13px;
+    opacity: 0.9;
+    margin: 0;
+    color: white;
+}
+
+/* ── Seção título ────────────────────────────────────────────────────────── */
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 6px;
+    margin: 20px 0 12px 0;
+}
+
+/* ── Tabelas ─────────────────────────────────────────────────────────────── */
+.dataframe {
+    font-size: 12px !important;
+}
+
+[data-testid="stDataFrame"] {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ── Botões e selects ────────────────────────────────────────────────────── */
+.stSelectbox > div,
+.stMultiselect > div {
+    background-color: var(--card_bg) !important;
+    border-radius: 8px;
+}
+
+/* ── Alerta ──────────────────────────────────────────────────────────────── */
+.alert-box {
+    background: var(--accent);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    font-size: 13px;
+    color: var(--text);
+}
+
+/* ── Plotly background ───────────────────────────────────────────────────── */
+.js-plotly-plot .plotly,
+.js-plotly-plot .plotly .bg {
+    background: var(--card_bg) !important;
+}
