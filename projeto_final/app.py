@@ -174,7 +174,7 @@ body { background: #0B0A0E; overflow: hidden; }
 """, height=700, scrolling=False)
 
 # ── Botão à direita ───────────────────────────────────────────────────────────
-_, col_btn = st.columns([4, 1])
+_, col_btn = st.columns([4, 2])
 with col_btn:
     if st.button("Acessar o Dashboard"):
         st.switch_page("pages/dashboard.py")
