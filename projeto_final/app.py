@@ -159,14 +159,35 @@ div[data-testid="stButton"] button:hover {
 </div>
 """, unsafe_allow_html=True)
 
-<img src="piaui.png" alt="estado do Piauí" class="imagem-personalizada">
-
+st.markdown("""
 <style>
-  .imagem-personalizada {
-    width: 200px;
-    height: auto;
+  /* Container para fixar e alinhar o conteúdo na lateral direita */
+  .container-direita {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Estilização da imagem com tamanho responsivo e bordas suaves */
+  .imagem-piaui {
+    width: 280px;         /* Largura ideal para visualização */
+    height: auto;         /* Mantém a proporção da foto */
+    border-radius: 12px;  /* Cantos levemente arredondados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave de fundo */
   }
 </style>
+
+<div class="container-direita">
+  <!-- Certifique-se de incluir a extensão correta: .png, .jpg ou .webp -->
+  <img src="piaui.png" class="imagem-piaui" alt="Imagem do Piauí">
+</div>
+""", unsafe_allow_html=True)
+
 
 col1, col2, col3 = st.columns([1, 1, 1])
 
