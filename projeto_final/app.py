@@ -12,7 +12,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# ── Reset global do Streamlit ─────────────────────────────────────────────────
+# ── Reset global do Streamlit e Ajuste do Botão ───────────────────────────────
 st.markdown("""
 <style>
 [data-testid="collapsedControl"] { display: none !important; }
@@ -20,6 +20,13 @@ st.markdown("""
 [data-testid="stHeader"]         { display: none !important; }
 .block-container                 { padding: 0 !important; max-width: 100% !important; }
 [data-testid="stAppViewContainer"] { background: #0B0A0E !important; }
+
+/* Nova regra para subir o bloco do botão */
+.subir-botao {
+    margin-top: -120px !important;  /* Puxa o botão para cima */
+    position: relative;
+    z-index: 99;                   /* Garante que ele fique clicável sobre o fundo */
+}
 
 div[data-testid="stButton"] button {
   background: #FF3D6B !important;
@@ -43,7 +50,7 @@ div[data-testid="stVerticalBlock"] {
 </style>
 """, unsafe_allow_html=True)
 
-# ── Hero via components.html (renderiza HTML puro sem filtro do Streamlit) ────
+# ── Hero via components.html (Ajustado o height para 580) ────────────────────
 components.html("""
 <!DOCTYPE html>
 <html>
@@ -54,12 +61,12 @@ components.html("""
 body { background: #0B0A0E; overflow: hidden; }
 
 .lp-hero {
-  min-height: 96vh;
+  min-height: 80vh; /* Ajustado ligeiramente para não empurrar a tela para baixo */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 48px;
+  padding: 60px 48px;
   position: relative;
   overflow: hidden;
   font-family: 'DM Sans', sans-serif;
@@ -171,10 +178,16 @@ body { background: #0B0A0E; overflow: hidden; }
 </div>
 </body>
 </html>
-""", height=580, scrolling=False)
+""", height=580, scrolling=False) # Mudado de 700 para 580
 
-# ── Botão à direita ───────────────────────────────────────────────────────────
-_, col_btn = st.columns([4, 1])
-with col_btn:
-    if st.button("Acessar o Dashboard"):
-        st.switch_page("pages/dashboard.py")
+# ── Botão com a classe customizada aplicado via container ─────────────────────
+# Criamos um container para poder injetar a classe CSS que sobe o botão
+container_botao = st.container()
+
+with container_botao:
+    st.markdown('<div class="subir-botao">', unsafe_allow_html=True)
+    _, col_btn = st.columns([4, 2])
+    with col_btn:
+        if st.button("Acessar o Dashboard"):
+            st.switch_page("pages/dashboard.py")
+    st.markdown('</div>', unsafe_allow_html=True)
