@@ -178,20 +178,3 @@ _, col_btn = st.columns([4, 1])
 with col_btn:
     if st.button("Acessar o Dashboard"):
         st.switch_page("pages/dashboard.py")
-
-# ── Footer ────────────────────────────────────────────────────────────────────
-st.markdown("""
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400&display=swap');
-</style>
-<div style="text-align:center; padding:28px 48px; background:#12101A;
-     border-top:1px solid rgba(255,61,107,0.18);
-     font-family:'DM Sans',sans-serif; font-size:12px; color:#9A8A93; line-height:1.8;">
-  <strong style="font-family:'Playfair Display',serif; font-size:15px;
-    color:#F4EDF0; display:block; margin-bottom:4px;">
-    Viol&ecirc;ncia Contra a Mulher &middot; Teresina / PI
-  </strong>
-  Dados referentes ao per&iacute;odo <span style="color:#FF3D6B;">2020&ndash;2025</span>
-  &middot; Fontes: SSP/PI &middot; SINAN/MS &middot; SMPM
-</div>
-""", unsafe_allow_html=True)
