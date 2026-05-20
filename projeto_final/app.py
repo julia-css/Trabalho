@@ -159,8 +159,6 @@ div[data-testid="stButton"] button:hover {
 </div>
 """, unsafe_allow_html=True)
 
-st.image("piaui.png", width=280, caption="Imagem do Piauí")
-
 col1, col2, col3 = st.columns([1, 1, 1])
 
 with col2:
