@@ -177,10 +177,8 @@ body { background: #0B0A0E; overflow: hidden; }
 </div>
 </body>
 </html>
-""", height=450, scrolling=False) # Mudado de 700 para 580
+""", height=500, scrolling=False)
 
-# ── Botão com a classe customizada aplicado via container ─────────────────────
-# Criamos um container para poder injetar a classe CSS que sobe o botão
 container_botao = st.container()
 
 with container_botao:
