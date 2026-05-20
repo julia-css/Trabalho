@@ -161,32 +161,37 @@ div[data-testid="stButton"] button:hover {
 
 st.markdown("""
 <style>
-  /* Container para fixar e alinhar o conteúdo na lateral direita */
+  /* Container fixo e centralizado na lateral direita */
   .container-direita {
     position: fixed;
     right: 40px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
-  /* Estilização da imagem com tamanho responsivo e bordas suaves */
+  /* Estilização da imagem com a identidade visual do site */
   .imagem-piaui {
-    width: 280px;         /* Largura ideal para visualização */
-    height: auto;         /* Mantém a proporção da foto */
-    border-radius: 12px;  /* Cantos levemente arredondados */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave de fundo */
+    width: 280px;
+    height: auto;
+    border-radius: 16px;
+    border: 3px solid #FF3D6B; /* Borda com a cor predominante */
+    /* Sombra suave combinando com o tom #FF3D6B */
+    box-shadow: 0px 8px 24px rgba(255, 61, 107, 0.2); 
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+  }
+
+  /* Efeito interativo quando o usuário passa o mouse */
+  .imagem-piaui:hover {
+    transform: scale(1.03);
   }
 </style>
 
 <div class="container-direita">
-  <!-- Certifique-se de incluir a extensão correta: .png, .jpg ou .webp -->
   <img src="piaui.png" class="imagem-piaui" alt="Imagem do Piauí">
 </div>
 """, unsafe_allow_html=True)
+
 
 
 col1, col2, col3 = st.columns([1, 1, 1])
