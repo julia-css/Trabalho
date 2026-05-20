@@ -185,8 +185,8 @@ def metric_card(col, label: str, value: str, delta: str = "") -> None:
         </div>""", unsafe_allow_html=True)
 
 k1, k2, k3, k4, k5 = st.columns(5)
-metric_card(k1, "Total de Casos",        f"{total:,}".replace(".", ","), "período filtrado")
-metric_card(k2, "Média Anual",           f"{media_anual:,}".replace(".", ","), "casos/ano")
+metric_card(k1, "Total de Casos",        f"{total:.}".replace(".", ","), "período filtrado")
+metric_card(k2, "Média Anual",           f"{media_anual:.}".replace(".", ","), "casos/ano")
 metric_card(k3, "Tipo Mais Frequente",   tipo_mais[:22])
 metric_card(k4, "Zona com Mais Casos",   zona_mais)
 metric_card(k5, "Agressor Prevalente",   agressor_mais[:22])
