@@ -177,7 +177,7 @@ body { background: #0B0A0E; overflow: hidden; }
 </div>
 </body>
 </html>
-""", height=500, scrolling=False)
+""", height=600, scrolling=False)
 
 container_botao = st.container()
 
