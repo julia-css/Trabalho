@@ -188,7 +188,7 @@ st.markdown("""
 </style>
 
 <div class="container-direita">
-  <img src="piaui.png" class="imagem-piaui" alt="Imagem do Piauí">
+  st.image("piaui.png", width=280, caption="Imagem do Piauí")
 </div>
 """, unsafe_allow_html=True)
 
