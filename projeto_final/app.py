@@ -159,6 +159,15 @@ div[data-testid="stButton"] button:hover {
 </div>
 """, unsafe_allow_html=True)
 
+<img src="piaui.png" alt="estado do Piauí" class="imagem-personalizada">
+
+<style>
+  .imagem-personalizada {
+    width: 200px;
+    height: auto;
+  }
+</style>
+
 col1, col2, col3 = st.columns([1, 1, 1])
 
 with col2:
