@@ -57,6 +57,23 @@ st.markdown("""
     radial-gradient(ellipse 40% 50% at 20% 80%, rgba(201,23,71,0.08) 0%, transparent 60%);
   pointer-events: none;
 }
+.hero-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+  width:100%;
+}
+
+.hero-left{
+  max-width:700px;
+}
+
+.hero-right{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 .lp-eyebrow {
   font-size: 12px;
   letter-spacing: 3px;
@@ -151,17 +168,35 @@ div[data-testid="stButton"] button:hover {
   <p class="lp-eyebrow">Teresina · Piauí · 2020–2025</p>
   <h1 class="lp-title">Violência contra<br>a <em>Mulher</em></h1>
   <p class="lp-sub">
-    Dados oficiais sobre violência de gênero registrados em Teresina entre 2020 e 2025.
-    Explore o painel interativo para filtrar, comparar e visualizar as informações.
+    Panorama da violência contra a mulher na capital do Piauí (2020–2025).
   </p>
   <div class="lp-ribbon">
+  </div>
+<div class="lp-hero">
+  <p class="lp-eyebrow">Teresina · Piauí · 2020–2025</p>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <h1 class="lp-title">
+        Violência contra<br>a <em>Mulher</em>
+      </h1>
+
+      <p class="lp-sub">
+        Panorama da violência contra a mulher na capital do Piauí (2020–2025).
+      </p>
+    </div>
+
+    <div class="hero-right">
+    </div>
   </div>
 </div>
 """, unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns([1, 1, 1])
+col1, col2 = st.columns([4,1])
 
 with col2:
+    st.markdown("<div style='margin-top:-260px'></div>", unsafe_allow_html=True)
+
     if st.button("Acessar o Dashboard"):
         st.switch_page("pages/dashboard.py")
 
