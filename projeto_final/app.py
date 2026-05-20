@@ -174,11 +174,10 @@ body { background: #0B0A0E; overflow: hidden; }
         <div class="lp-ribbon-line"></div>
       </div>
     </div>
-  </div>
 </div>
 </body>
 </html>
-""", height=580, scrolling=False) # Mudado de 700 para 580
+""", height=450, scrolling=False) # Mudado de 700 para 580
 
 # ── Botão com a classe customizada aplicado via container ─────────────────────
 # Criamos um container para poder injetar a classe CSS que sobe o botão
