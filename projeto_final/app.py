@@ -191,7 +191,6 @@ div[data-testid="stButton"] button:hover {
 <div class="lp-hero">
   <div class="hero-content">
 
-    <!-- Lado esquerdo: textos -->
     <div class="hero-left">
       <p class="lp-eyebrow">Teresina · Piauí · 2020–2025</p>
       <h1 class="lp-title">
@@ -202,7 +201,6 @@ div[data-testid="stButton"] button:hover {
       </p>
     </div>
 
-    <!-- Lado direito: ribbon + placeholder do botão -->
     <div class="hero-right">
       <div class="lp-ribbon">
         <div class="lp-ribbon-line"></div>
